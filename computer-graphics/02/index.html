@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 2. Брезенхем</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <h1>Алгоритмы построения отрезка</h1>
+
+  <!-- блок управления: 4 поля координат, переключатель алгоритма, кнопка -->
+  <div class="controls">
+    <label>X1: <input type="number" id="x1" value="2"></label>
+    <label>Y1: <input type="number" id="y1" value="2"></label>
+    <label>X2: <input type="number" id="x2" value="20"></label>
+    <label>Y2: <input type="number" id="y2" value="8"></label>
+
+    <label>
+      Алгоритм:
+      <select id="algo">
+        <option value="dda">ЦДА</option>
+        <option value="bresenham" selected>Брезенхем</option>
+      </select>
+    </label>
+
+    <button id="buildBtn">Построить</button>
+  </div>
+
+  <!-- отдельная кнопка для замера скорости -->
+  <div class="controls">
+    <button id="benchBtn">Сравнить скорость (1000 линий)</button>
+  </div>
+
+  <!-- холст -->
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <!-- две колонки: слева пиксели, справа таблица шагов -->
+  <div class="columns">
+
+    <div>
+      <h2>Пиксели</h2>
+      <ul id="pixelsList"></ul>
+    </div>
+
+    <div>
+      <h2>Таблица шагов Брезенхема</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>шаг</th>
+            <th>x</th>
+            <th>y</th>
+            <th>error</th>
+            <th>error2</th>
+            <th>Δx</th>
+            <th>Δy</th>
+          </tr>
+        </thead>
+        <tbody id="stepsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
