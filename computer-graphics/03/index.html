@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 3. Окружность по средней точке</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Растеризация окружности</h1>
+
+  <!-- управление: центр, радиус, чекбокс симметрии, кнопки -->
+  <div class="controls">
+    <label>cx: <input type="number" id="cx" value="20"></label>
+    <label>cy: <input type="number" id="cy" value="15"></label>
+    <label>r: <input type="number" id="r" value="5"></label>
+
+    <label>
+      <input type="checkbox" id="highlightStep"> Подсветить один шаг
+    </label>
+
+    <button id="buildBtn">Построить</button>
+    <button id="clearBtn">Очистить</button>
+    <button id="compareBtn">Сравнить с формулой</button>
+  </div>
+
+  <p id="error" class="error"></p>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <!-- две колонки: пиксели и таблица шагов -->
+  <div class="columns">
+    <div>
+      <h2>Пиксели</h2>
+      <ul id="pixelsList"></ul>
+    </div>
+
+    <div>
+      <h2>Таблица шагов</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>шаг</th>
+            <th>x</th>
+            <th>y</th>
+            <th>d до</th>
+            <th>вариант</th>
+            <th>d после</th>
+          </tr>
+        </thead>
+        <tbody id="stepsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
