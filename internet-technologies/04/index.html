@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 4. CRUD публикаций</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Публикации</h1>
+
+  <!-- блок управления -->
+  <div class="controls">
+    <button id="loadBtn">Загрузить</button>
+    <input type="text" id="filterInput" placeholder="Поиск по заголовку или тексту">
+  </div>
+
+  <!-- сообщение об ошибке / статусе -->
+  <p id="error" class="error"></p>
+
+  <!-- форма создания / редактирования -->
+  <div class="form-block">
+    <h2 id="formTitle">Новая публикация</h2>
+
+    <label>
+      Заголовок:
+      <input type="text" id="titleInput" placeholder="Введите заголовок">
+    </label>
+
+    <label>
+      Текст:
+      <textarea id="bodyInput" rows="3" placeholder="Введите текст"></textarea>
+    </label>
+
+    <div class="form-actions">
+      <button id="saveBtn">Сохранить</button>
+      <button id="cancelBtn" class="secondary">Отмена</button>
+    </div>
+  </div>
+
+  <!-- список публикаций -->
+  <div id="postsList"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

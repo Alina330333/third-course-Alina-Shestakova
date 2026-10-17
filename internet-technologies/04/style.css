@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.form-block {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.form-block h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.form-block label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-block input[type="text"],
+.form-block textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* карточка публикации */
+.post-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.post-card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #222;
+}
+
+.post-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.post-card .meta {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.post-card .actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.post-card .actions button {
+  font-size: 13px;
+  padding: 4px 10px;
+}
+
+.hint {
+  color: #666;
+  font-style: italic;
+}
