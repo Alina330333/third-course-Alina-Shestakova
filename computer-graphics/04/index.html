@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 4. Отсечение Коэна-Сазерленда</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Отсечение отрезков (Коэн-Сазерленд)</h1>
+
+  <!-- Блок настроек: окно и координаты отрезка -->
+  <div class="controls">
+    <fieldset>
+      <legend>Окно</legend>
+      <label>xmin: <input type="number" id="xmin" value="10"></label>
+      <label>ymin: <input type="number" id="ymin" value="10"></label>
+      <br>
+      <label>xmax: <input type="number" id="xmax" value="30"></label>
+      <label>ymax: <input type="number" id="ymax" value="20"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Отрезок</legend>
+      <label>x1: <input type="number" id="x1" value="5"></label>
+      <label>y1: <input type="number" id="y1" value="5"></label>
+      <br>
+      <label>x2: <input type="number" id="x2" value="35"></label>
+      <label>y2: <input type="number" id="y2" value="25"></label>
+    </fieldset>
+  </div>
+
+  <div class="controls">
+    <button id="buildBtn">Построить</button>
+    <button id="clearBtn">Очистить</button>
+    <button id="polyBtn">Тест ломаной</button>
+    <button id="randBtn">Случайные (100)</button>
+  </div>
+
+  <p id="error" class="error"></p>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="info">
+    <p id="codesDisplay">Коды концов: -</p>
+    <p id="statsDisplay"></p>
+  </div>
+
+  <!-- Две колонки: таблица шагов и список отсечённых отрезков -->
+  <div class="columns">
+    <div>
+      <h2>Таблица шагов</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>шаг</th>
+            <th>A</th>
+            <th>codeA</th>
+            <th>B</th>
+            <th>codeB</th>
+            <th>действие</th>
+          </tr>
+        </thead>
+        <tbody id="stepsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
