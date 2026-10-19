@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #222;
+}
+
+h1, h2 { color: #333; }
+
+.controls { margin-bottom: 15px; display: flex; gap: 15px; flex-wrap: wrap; }
+fieldset { border: 1px solid #ccc; padding: 8px 12px; border-radius: 4px; }
+legend { font-size: 14px; font-weight: bold; }
+label { font-size: 14px; margin-right: 10px; display: inline-block; margin-bottom: 5px; }
+input[type="number"] { width: 50px; padding: 4px; font-size: 14px; }
+button { padding: 6px 14px; font-size: 14px; cursor: pointer; }
+
+.error { color: red; font-size: 14px; min-height: 18px; }
+.info { font-size: 14px; margin-bottom: 10px; background: #f5f5f5; padding: 10px; border-radius: 4px; }
+
+canvas {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.columns { display: flex; gap: 30px; }
+.columns > div { flex: 1; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border: 1px solid #ccc; padding: 4px 6px; text-align: center; }
+th { background: #f0f0f0; }
+tbody { max-height: 300px; overflow-y: auto; display: block; }
+thead, tbody tr { display: table; width: 100%; table-layout: fixed; }
