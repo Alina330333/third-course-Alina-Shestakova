@@ -1,0 +1,12 @@
+{
+  "name": "it-lab-05-api",
+  "version": "1.0.0",
+  "description": "Лабораторная работа 5. Собственный REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
