@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 5. Алгоритмы заливки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Алгоритмы заливки</h1>
+
+  <div class="controls">
+    <button id="btnFlood" class="active">Flood Fill</button>
+    <button id="btnScanline">Scanline Fill</button>
+    <button id="btnClear">Очистить</button>
+    <button id="btnStepBack">Шаг назад</button>
+    <button id="btnStepForward">Шаг вперед</button>
+    <span id="stepInfo">Шаг: 0</span>
+  </div>
+
+  <p class="hint">Кликните по холсту, чтобы выбрать стартовую точку (для Flood Fill) или линию сканирования (для Scanline Fill).</p>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="info-panel">
+    <h2>Таблица Scanline (последняя строка)</h2>
+    <div id="scanlineInfo">Здесь появятся данные о пересечениях и интервалах.</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
