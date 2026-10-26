@@ -47,3 +47,11 @@ curl -X POST http://localhost:3000/api/books -H "Content-Type: application/json"
 curl http://localhost:3000/api/does-not-exist
 
 Ответ: статус `404 Not Found`, JSON: `{"error": "Route not found"}`.
+
+## Скриншоты работы
+
+**Запуск сервера в терминале:**
+![Терминал](terminal.png)
+
+**Ответ API со списком книг:**
+![Браузер](browser.png)
