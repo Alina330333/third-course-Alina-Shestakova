@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 6. Сазерленд-Ходжман</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Отсечение многоугольника (Сазерленд-Ходжман)</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Окно отсечения</legend>
+      <label>xmin: <input type="number" id="xmin" value="10"></label>
+      <label>ymin: <input type="number" id="ymin" value="10"></label>
+      <br>
+      <label>xmax: <input type="number" id="xmax" value="30"></label>
+      <label>ymax: <input type="number" id="ymax" value="20"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Этап визуализации</legend>
+      <select id="stageSelect">
+        <option value="0">Исходный</option>
+        <option value="1">После LEFT</option>
+        <option value="2">После RIGHT</option>
+        <option value="3">После TOP</option>
+        <option value="4">После BOTTOM (Итог)</option>
+      </select>
+    </fieldset>
+  </div>
+
+  <div class="controls">
+    <button id="buildBtn">Отсечь</button>
+    <button id="clearBtn">Очистить</button>
+  </div>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="tables">
+    <div>
+      <h2>Этапы отсечения</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Этап</th>
+            <th>Число вершин</th>
+            <th>Координаты</th>
+          </tr>
+        </thead>
+        <tbody id="stageTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
