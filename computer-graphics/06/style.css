@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #222;
+}
+
+h1, h2 { color: #333; }
+
+.controls { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+fieldset { border: 1px solid #ccc; padding: 8px 12px; border-radius: 4px; }
+legend { font-size: 14px; font-weight: bold; }
+label { font-size: 14px; margin-right: 10px; display: inline-block; margin-bottom: 5px; }
+input[type="number"] { width: 50px; padding: 4px; font-size: 14px; }
+select { padding: 6px; font-size: 14px; }
+button { padding: 6px 14px; font-size: 14px; cursor: pointer; }
+
+canvas {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tables { margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+th { background: #f0f0f0; }
