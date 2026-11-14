@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 8. Поиск и пагинация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Задачи (с поиском и пагинацией)</h1>
+
+    <div id="message" class="message"></div>
+
+    <!-- Панель фильтров -->
+    <div class="filters">
+      <input type="text" id="search" placeholder="Поиск по названию...">
+      <select id="done-filter">
+        <option value="">Все статусы</option>
+        <option value="true">Выполненные</option>
+        <option value="false">Невыполненные</option>
+      </select>
+      <select id="sort">
+        <option value="id">По ID</option>
+        <option value="title">По названию</option>
+      </select>
+      <select id="order">
+        <option value="asc">По возрастанию</option>
+        <option value="desc">По убыванию</option>
+      </select>
+      <select id="limit">
+        <option value="5">5 на странице</option>
+        <option value="10">10 на странице</option>
+      </select>
+    </div>
+
+    <!-- Список задач -->
+    <ul id="task-list" class="task-list"></ul>
+
+    <!-- Пагинация -->
+    <div class="pagination">
+      <button id="prev-btn">Назад</button>
+      <span id="page-info">Страница 1</span>
+      <button id="next-btn">Вперёд</button>
+    </div>
+
+    <!-- Добавление новой задачи -->
+    <form id="task-form" class="task-form">
+      <h2>Добавить задачу</h2>
+      <input type="text" id="new-title" placeholder="Название задачи" required>
+      <button type="submit">Добавить</button>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
