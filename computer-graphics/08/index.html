@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 8. 3D Каркас</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>3D Каркасная модель</h1>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Управление</legend>
+      <label>Угол X: <input type="range" id="angleX" min="-180" max="180" value="30"></label> <span id="valX">30°</span><br>
+      <label>Угол Y: <input type="range" id="angleY" min="-180" max="180" value="-45"></label> <span id="valY">-45°</span><br>
+      <label>Угол Z: <input type="range" id="angleZ" min="-180" max="180" value="0"></label> <span id="valZ">0°</span><br>
+      
+      <label>Масштаб: <input type="range" id="scale" min="0.5" max="3" step="0.1" value="1.5"></label><br>
+      <label>Дистанция (Z): <input type="range" id="tz" min="2" max="15" step="0.5" value="6"></label><br>
+      
+      <label>Проекция: 
+        <select id="projection">
+          <option value="perspective">Перспективная</option>
+          <option value="ortho">Ортографическая</option>
+        </select>
+      </label><br>
+      
+      <label>Модель:
+        <select id="model">
+          <option value="cube">Куб</option>
+          <option value="pyramid">Пирамида</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Анимация</legend>
+      <button id="playBtn">▶ Вращать</button>
+      <button id="resetBtn">Сброс</button>
+    </fieldset>
+  </div>
+
+  <canvas id="canvas" width="600" height="450"></canvas>
+
+  <div class="info-panel">
+    <h2>Данные вершины P0</h2>
+    <p><b>До преобразования:</b> <span id="posOrig">...</span></p>
+    <p><b>После модели (3D):</b> <span id="posWorld">...</span></p>
+    <p><b>Экран (2D):</b> <span id="posScreen">...</span></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
