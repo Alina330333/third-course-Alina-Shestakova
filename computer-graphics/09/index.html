@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЛР9 — Z-буфер и закрашенные треугольники</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ЛР9. Программный 3D-рендерер с Z-буфером</h1>
+
+  <div class="layout">
+    <div class="controls">
+      <fieldset>
+        <legend>Режим</legend>
+        <label><input type="radio" name="mode" value="wireframe"> Каркас</label>
+        <label><input type="radio" name="mode" value="filled" checked> Закрашенная модель</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Проекция</legend>
+        <label><input type="radio" name="proj" value="ortho"> Ортографическая</label>
+        <label><input type="radio" name="proj" value="persp" checked> Перспективная</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Вращение</legend>
+        <label>X <input type="range" id="rotX" min="-180" max="180" value="-20"></label>
+        <label>Y <input type="range" id="rotY" min="-180" max="180" value="30"></label>
+        <label>Z <input type="range" id="rotZ" min="-180" max="180" value="0"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Камера / цвет</legend>
+        <label>Расстояние <input type="range" id="dist" min="3" max="12" value="6" step="0.1"></label>
+        <label>Цвет грани 1 <input type="color" id="color1" value="#e74c3c"></label>
+        <label>Цвет грани 2 <input type="color" id="color2" value="#3498db"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Опции</legend>
+        <label><input type="checkbox" id="cull" checked> Отсечение обратных граней</label>
+      </fieldset>
+
+      <button id="reset">Сброс</button>
+
+      <div class="stats">
+        <p>Треугольников после отсечения: <span id="triCount">0</span></p>
+        <p>Пикселей прошло Z-тест: <span id="pixelCount">0</span></p>
+      </div>
+    </div>
+
+    <canvas id="canvas" width="640" height="480"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
