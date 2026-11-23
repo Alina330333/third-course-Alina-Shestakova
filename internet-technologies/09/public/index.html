@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Лаба 9. Транзакции</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>ЛР9. Задачи и Транзакции</h1>
+    
+    <div class="tabs">
+      <button id="btn-tasks" class="tab-btn active">Задачи (ЛР8)</button>
+      <button id="btn-transfers" class="tab-btn">Склады (ЛР9)</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div id="tab-tasks">
+      <div class="filters">
+        <input type="text" id="search" placeholder="Поиск по названию...">
+        <select id="done-filter">
+          <option value="">Все статусы</option>
+          <option value="true">Выполненные</option>
+          <option value="false">Невыполненные</option>
+        </select>
+        <select id="sort">
+          <option value="id">По ID</option>
+          <option value="title">По названию</option>
+        </select>
+        <select id="order">
+          <option value="asc">По возрастанию</option>
+          <option value="desc">По убыванию</option>
+        </select>
+        <select id="limit">
+          <option value="5">5 на странице</option>
+          <option value="10">10 на странице</option>
+        </select>
+      </div>
+
+      <ul id="task-list" class="task-list"></ul>
+
+      <div class="pagination">
+        <button id="prev-btn">Назад</button>
+        <span id="page-info">Страница 1</span>
+        <button id="next-btn">Вперёд</button>
+      </div>
+
+      <form id="task-form" class="task-form">
+        <h2>Добавить задачу</h2>
+        <input type="text" id="new-title" placeholder="Название задачи" required>
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
+
+    <div id="tab-transfers" class="hidden">
+      <div class="transfer-layout">
+        <div class="box">
+          <h3>Остатки на складах</h3>
+          <ul id="inventory-list" class="task-list"></ul>
+        </div>
+        
+        <div class="box">
+          <h3>Новый перевод</h3>
+          <form id="transfer-form" class="task-form" style="flex-direction: column;">
+            <label>Откуда:
+              <select id="from-id">
+                <option value="1">Склад А</option>
+                <option value="2">Склад Б</option>
+              </select>
+            </label>
+            <label>Куда:
+              <select id="to-id">
+                <option value="2">Склад Б</option>
+                <option value="1">Склад А</option>
+              </select>
+            </label>
+            <label>Количество:
+              <input type="number" id="quantity" min="1" value="1" step="1">
+            </label>
+            <button type="submit">Перенести</button>
+          </form>
+        </div>
+      </div>
+
+      <h3>История переводов</h3>
+      <ul id="history-list" class="task-list"></ul>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
