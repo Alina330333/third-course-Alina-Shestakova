@@ -1,0 +1,14 @@
+{
+  "name": "it-lab-10",
+  "version": "1.0.0",
+  "description": "Лабораторная работа 10. Автоматические тесты",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "express": "^4.18.2"
+  }
+}
